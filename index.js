@@ -10,30 +10,30 @@ api.get('/', function(req, res, next)
 
 api.get('/contacts', function(req, res, next)
 {
-	res.end([]) ;
+	res.send([]) ;
 }) ;
 
 api.get('/contacts/:name', function(req, res, next)
 {
-	res.end() ;
+	res.send() ;
 }) ;
 
 api.post('/contacts/:name', function(req, res, next)
 {
-	if(req.params.name == 'exist')
+	if(req.params.name == 'exists')
 		return res.status(403).send() ;
 	
-	res.end() ;
+	res.send() ;
 }) ;
 
 api.put('/contacts/:name/:new', function(req, res, next)
 {
-	res.end() ;
+	res.send() ;
 }) ;
 
 api.delete('/contacts/:name', function(req, res, next)
 {
-	res.end() ;
+	res.send() ;
 }) ;
 
 
