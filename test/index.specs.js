@@ -37,6 +37,14 @@ describe('contacts', function()
 			.send()
 			.expect(200) ;
 		}) ;
+		
+		it('should not be authorized to create a new contact with an already reg', function()
+		{
+			return request(api)
+			.post('/contacts/exists')
+			.send()
+			expect(403) ;
+		}) ;
 	}) ;
 	
 	describe('PUT /contacts/:name/:new', function()
