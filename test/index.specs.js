@@ -2,6 +2,19 @@ var request = require('supertest') ;
 var api = require('../index.js') ;
 
 
+/*
+describe('api', function()
+{
+	it('should return Hello world on GET /', function()
+	{
+		return request(api)
+		.get('/')
+		.send()
+		.expect('Hello foobar') ;
+	}) ;
+}) ;
+*/
+
 describe('contacts', function()
 {
 	describe('GET /contacts', function()
