@@ -8,6 +8,34 @@ api.get('/', function(req, res, next)
 	res.send('Hello World') ;
 }) ;
 
+api.get('/contacts', function(req, res, next)
+{
+	res.end([]) ;
+}) ;
+
+api.get('/contacts/:name', function(req, res, next)
+{
+	res.end() ;
+}) ;
+
+api.post('/contacts/:name', function(req, res, next)
+{
+	if(req.params.name == 'exist')
+		return res.status(403).send() ;
+	
+	res.end() ;
+}) ;
+
+api.put('/contacts/:name/:new', function(req, res, next)
+{
+	res.end() ;
+}) ;
+
+api.delete('/contacts/:name', function(req, res, next)
+{
+	res.end() ;
+}) ;
+
 
 /*
 console.log('server started on port 3000') ;
