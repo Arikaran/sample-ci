@@ -30,7 +30,7 @@ describe('contacts', function()
 			return request(api)
 			.post('/contacts/exists')
 			.send()
-			expect(403) ;
+			.expect(403) ;
 		}) ;
 	}) ;
 	
